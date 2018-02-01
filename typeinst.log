@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  1 FEB 2018 23:16
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  2 FEB 2018 00:00
 entering extended mode
 **c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst
 (c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst.tex
@@ -222,18 +222,18 @@ a shorter form with \titlerunning prior to \maketitle
 Here is how much of TeX's memory you used:
  1886 strings out of 495354
  23830 string characters out of 3183131
- 79672 words of memory out of 3000000
+ 78672 words of memory out of 3000000
  5061 multiletter control sequences out of 15000+200000
  7501 words of font info for 29 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,4n,24p,798b,156s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,4n,24p,436b,156s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Programfiles
 /CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfiles/CTEX/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/MiKTeX/font
 s/type1/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmti9.pfb>
-Output written on typeinst.pdf (1 page, 74788 bytes).
+Output written on typeinst.pdf (1 page, 75119 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
