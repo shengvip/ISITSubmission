@@ -1,14 +1,8 @@
-
 \documentclass[runningheads,a4paper]{llncs}
-
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
-
 \usepackage{url}
-\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
-\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
-\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
@@ -17,10 +11,10 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{ }
-
+\title{ three diminsional sound reproduction in Vehicles based on data mining techniques }
+ % 基于数据挖掘技术的车内3D声场重建技术
 % a short form should be given in case it is too long for the running head
-\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
+% \titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -28,50 +22,51 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Alfred Hofmann%
-\thanks{Please note that the LNCS Editorial assumes that all authors have used
-the western naming convention, with given names preceding surnames. This determines
-the structure of the names in the running heads and the author index.}%
-\and Ursula Barth\and Ingrid Haas\and Frank Holzwarth\and\\
-Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
-Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
+\author{Maosheng Zhang, Ruimin Hu, Lin JIang}
+% \thanks{Project imformation}
 %
-\authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
+% \authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
 % (feature abused for this document to repeat the title also on left hand pages)
-
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{Springer-Verlag, Computer Science Editorial,\\
-Tiergartenstr. 17, 69121 Heidelberg, Germany\\
-\mailsa\\
-\mailsb\\
-\mailsc\\
-\url{http://www.springer.com/lncs}}
-
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem"
-% (search for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
+\institute{computer school, wuhan university\\
+Bayi road, Wuhan, China\\
+}
 %
 
-\tocauthor{Authors' Instructions}
 \maketitle
-
 
 \begin{abstract}
 The abstract should summarize the contents of the paper and should
 contain at least 70 and at most 150 words. It should be written using the
 \emph{abstract} environment.
-\keywords{We would like to encourage you to list your keywords within
-the abstract section}
+\keywords{Vehicles, sound, data mining, reproduction}
 \end{abstract}
 
 
-\section{Introduction}
+\section{Introduction}\label{sec:Intro}
+%汽车音频研究
 
-this is a  \cite{Ando11TASLP}\cite{Ando07AES}
-second line
+A sound reproduction system for a motor vehicle in which two channel signals are applied to two loudspeakers provided in the passenger compartment to reproduce the signals. The system includes a transfer function converting circuit for converting transfer functions between a listener and the first and second speakers into different transfer functions in different directions from those to the first and second speakers, a delay circuit for compensating for a distant difference between the listener and the first and second speakers, and a reverberation circuit for providing reverberation to two channel input signals, whereby a feeling of a widened sound region is obtained even in a small passenger compartment.\cite{Akito82}
+
+
+
+
+
+%3D汽车音频
+
+%3D音频
+The most there popular 3-D sound reproduction algorithms include Wave Field Synthesis(WFS), Ambisonics and Amplitude panning. WFS aims to reproduce the whole sound field and thus the real sound immersion was reproducted. However, WFS method is not practicle since there are too many loudspeakers requiered in WFS system. Ambisonics system  
+
+
+\section{tree regression}\label{sec:regression}
+
+\section{three diminsional sound reproduction algorithm in Vehicles}\label{sec:algorithm}
+
+\section{experiment}\label{sec:experiment}
+
+\section{conclusion}\label{sec:conclusion}
+
 \label{bib:bibliography}
 
 \bibliographystyle{ISIT}

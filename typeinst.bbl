@@ -21,14 +21,8 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Ando11TASLP}
-A.~Ando, ``Conversion of multichannel sound signal maintaining physical
-  properties of sound in reproduced sound field,'' \emph{Audio, Speech, and
-  Language Processing, IEEE Transactions on}, vol.~19, no.~6, pp. 1467--1475,
-  2011.
-
-\bibitem{Ando07AES}
-A.~Akio and K.Hamasaki, ``Three dimensional panning algorithm,'' in \emph{AES
-  13th Regional Convention}, 2007.
+\bibitem{Akito82}
+A.~Yamada, ``Sound reproduction system for motor vehicle,'' \emph{Journal of
+  the Acoustical Society of America}, vol.~72, no.~3, pp. 1101--1101, 1982.
 
 \end{thebibliography}
