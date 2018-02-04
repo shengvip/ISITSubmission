@@ -1,6 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: typeinst.aux
 The style file: ISIT.bst
 Database file #1: ISIT.bib
+I was expecting a `,' or a `}'---line 61 of file ISIT.bib
+ : 
+ : @patent{Miriam2014,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 72 of file ISIT.bib
+ : 
+ : @Article{David07,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 100 of file ISIT.bib
+ : 
+ : %--------------------------bib in ICME----------------------------
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -11,6 +26,9 @@ while executing---line 2411 of file ISIT.bst
 Too many commas in name 1 of "Orellana, Fernando Mar (Benito Juarez, MX), Canudas, Alvaro Sanchez (Naucalpan, MX)" for entry orellana2015loudspeaker
 while executing---line 2411 of file ISIT.bst
 Warning--missing nationality in orellana2015loudspeaker
+Warning--missing nationality in Simon2005
+Warning--missing nationality in Miriam2014
+Warning--missing nationality in Gibson15
 
 Done.
-(There were 3 error messages)
+(There were 6 error messages)

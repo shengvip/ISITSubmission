@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  3 FEB 2018 17:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  5 FEB 2018 00:00
 entering extended mode
 **c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst
 (c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst.tex
@@ -213,60 +213,29 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Title too long for running head. Please supply
 a shorter form with \titlerunning prior to \maketitle
-
-LaTeX Warning: Citation `Akito82' on page 1 undefined on input line 49.
-
-
-LaTeX Warning: Citation `terai1990sound' on page 1 undefined on input line 49.
-
-
-LaTeX Warning: Citation `Takeshi03' on page 1 undefined on input line 53.
-
-
-LaTeX Warning: Citation `clark1998vehicle' on page 1 undefined on input line 53
-.
-
-
-LaTeX Warning: Citation `orellana2015loudspeaker' on page 1 undefined on input 
-line 53.
-
-
-LaTeX Warning: Citation `orellana2015loudspeaker' on page 1 undefined on input 
-line 53.
-
-
-Overfull \hbox (1.2103pt too wide) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 source through a con-trol cir-cuit. The con-trol cir-cuit ef-fe
-ct-s sig-nal de-lays, crossover
- []
-
-[1
+(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.bbl [1
 
 
 {D:/Programfiles/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
-] (c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.bbl) [2]
-(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+]) [2]
+(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux) ) 
 Here is how much of TeX's memory you used:
- 1909 strings out of 495354
- 24091 string characters out of 3183131
- 80621 words of memory out of 3000000
- 5077 multiletter control sequences out of 15000+200000
- 10612 words of font info for 41 fonts, out of 3000000 for 9000
+ 1911 strings out of 495354
+ 24112 string characters out of 3183131
+ 80696 words of memory out of 3000000
+ 5080 multiletter control sequences out of 15000+200000
+ 10304 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,5n,24p,910b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
-ogramfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfil
-es/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmti9.pfb>
-Output written on typeinst.pdf (2 pages, 92100 bytes).
+ 29i,5n,24p,440b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programfiles
+/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfiles/CTEX/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmti9.pfb>
+Output written on typeinst.pdf (2 pages, 84274 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
+ 29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
