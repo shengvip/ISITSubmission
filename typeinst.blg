@@ -11,9 +11,9 @@ I was expecting a `,' or a `}'---line 72 of file ISIT.bib
  : @Article{David07,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 100 of file ISIT.bib
+I was expecting a `,' or a `}'---line 94 of file ISIT.bib
  : 
- : %--------------------------bib in ICME----------------------------
+ : @Article{AasthaTASLP11,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.

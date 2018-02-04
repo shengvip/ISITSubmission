@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  5 FEB 2018 00:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  5 FEB 2018 00:41
 entering extended mode
 **c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst
 (c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst.tex
@@ -217,23 +217,32 @@ a shorter form with \titlerunning prior to \maketitle
 
 
 {D:/Programfiles/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
-]) [2]
-(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux) ) 
+]
+c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.bbl:90: Misplaced align
+ment tab character &
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+) [2] (c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux) ) 
 Here is how much of TeX's memory you used:
- 1911 strings out of 495354
- 24112 string characters out of 3183131
- 80696 words of memory out of 3000000
- 5080 multiletter control sequences out of 15000+200000
+ 1914 strings out of 495354
+ 24149 string characters out of 3183131
+ 81708 words of memory out of 3000000
+ 5083 multiletter control sequences out of 15000+200000
  10304 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,5n,24p,440b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programfiles
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfiles/CTEX/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmti9.pfb>
-Output written on typeinst.pdf (2 pages, 84274 bytes).
+ 29i,5n,24p,877b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Progra
+mfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfiles/C
+TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmti9.pfb>
+Output written on typeinst.pdf (2 pages, 92219 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
