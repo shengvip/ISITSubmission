@@ -87,7 +87,13 @@ D.~Comminiello, S.~Cecchi, M.~Scarpiniti, M.~Gasparini, L.~Romoli, F.~Piazza,
 \bibitem{zms2015}
 M.~Zhang, R.~Hu, S.~Chen, X.~Wang, D.~Li, and L.~Jiang, ``Spatial perception
   reproduction of sound events based on sound property coincidences,'' in
-  \emph{International conference on Multimedia & Expro}.\hskip 1em plus 0.5em
+  \emph{International conference on Multimedia and Expro}.\hskip 1em plus 0.5em
   minus 0.4em\relax IEEE, 2015.
+
+\bibitem{Gergely17}
+G.~Firtha, P.~Fiala, F.~Schultz, and S.~Spors, ``Improved referencing schemes
+  for 2.5d wave field synthesis driving functions,'' \emph{IEEE Transactions on
+  Audio, Speech, and Language Processing}, vol.~25, no.~5, pp. 1117--1127, MAY
+  2017.
 
 \end{thebibliography}
