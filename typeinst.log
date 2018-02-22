@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  6 FEB 2018 11:31
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.8)  22 FEB 2018 01:04
 entering extended mode
 **c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst
 (c:/0Materials/MULTIMEDIA/Papers/ISITSubmission/typeinst.tex
@@ -174,7 +174,20 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux)
+(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux
+
+LaTeX Warning: Label `eq:LinRegression' multiply defined.
+
+
+LaTeX Warning: Label `eq:LinRegressionY' multiply defined.
+
+
+LaTeX Warning: Label `eq:LinRegressionVector1' multiply defined.
+
+
+LaTeX Warning: Label `eq:LinRegressionVector2' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
@@ -187,8 +200,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-
-(D:\Programfiles\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+ (D:\Programfiles\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen126
@@ -217,25 +229,33 @@ a shorter form with \titlerunning prior to \maketitle
 
 
 {D:/Programfiles/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
-] (c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.bbl [2]) [3]
-(c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux) ) 
+] [2] [3] [4] (c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.bbl
+[5]) [6] (c:\0Materials\MULTIMEDIA\Papers\ISITSubmission\typeinst.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1915 strings out of 495354
- 24160 string characters out of 3183131
- 81712 words of memory out of 3000000
- 5084 multiletter control sequences out of 15000+200000
- 10304 words of font info for 40 fonts, out of 3000000 for 9000
+ 1935 strings out of 495354
+ 24466 string characters out of 3183131
+ 83851 words of memory out of 3000000
+ 5103 multiletter control sequences out of 15000+200000
+ 10612 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,5n,24p,1105b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programfiles
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfiles/CTEX/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmti9.pfb>
-Output written on typeinst.pdf (3 pages, 94843 bytes).
+ 29i,6n,24p,1272b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
+ogramfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programfil
+es/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Programfiles/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Programfiles/CTEX/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr9.pfb><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><D:/Programfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Pro
+gramfiles/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on typeinst.pdf (6 pages, 171835 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

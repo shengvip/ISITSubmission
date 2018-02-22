@@ -48,22 +48,97 @@ contain at least 70 and at most 150 words. It should be written using the
 %汽车音频研究
 Sound systems for vehicle have been well researched by scientists and engineers.   Akitoshi Yamada developed a sound reproduction system for vehicle using only a pair of loudspeakers in 1982\cite{Akito82}. The system comprised a transfer function, a delay circuit, and a reverberation circuit. With the help of these components, a surrounding sound system was implemented. 
 Honda Motor designed a sound reproducing apparatus for vehicle in 1990\cite{terai1990sound}. The apparatus takes advantage of a acoustic duct and a loudspeaker placing in the duct. 
-In 2003, Takeshi reproduced a requiered sound image for the specified seat with a sound system consisting of two loudspeakers for Vehicles\cite{Takeshi03}. 
+In 2003, Takeshi reproduced a required sound image for the specified seat with a sound system consisting of two loudspeakers for Vehicles\cite{Takeshi03}. 
 In addition, sound systems using more than two loudspeakers are developed to generate surrounding ambiance acoustic effects\cite{clark1998vehicle}\cite{orellana2015loudspeaker}. A sound entertainment system for determined positions in a vehicle is proposed by David in 2007. This system provides ultrasonic waves and cancels the unwanted noise\cite{David07}. 
-FORD Motor Company invented a multichannel sound reproduction system for vehicles and applied for a patent in 2017\cite{orellana2015loudspeaker}. The embodiments mentioned in this papent compposed of several loudspeakers, including a low-frequency loudspeaker or sub-woofer, placing in pilars, door frames and vehicle roof. Obviously, the sound reproduction system for entertainment in vehicle are well researched. Lots of patents about sound reproduction in vehicle are applied by vehicle companies to recreat acoustic environment\cite{Simon2005}\cite{Miriam2014}\cite{David07}\cite{Gibson15}. However, sound spatial perception is far from satisfactory and acoustic virtual reality has not been implemented in vehicle. Three-dimensional (3D) sound reproduction system provides immersive perception about sound sources and thus enhances the sensation of reality\cite{AasthaTASLP11}\cite{Danilo15TMM}\cite{zms2015}. It is necessary to reproduce 3D sound to enjoy realistic acoustic environment and sound events in vehicle.
+FORD Motor Company invented a multichannel sound reproduction system for vehicles and applied for a patent in 2017\cite{orellana2015loudspeaker}. The embodiments mentioned in this patent composed of several loudspeakers, including a low-frequency loudspeaker or sub-woofer, placing in pillars, door frames and vehicle roof. Obviously, the sound reproduction system for entertainment in vehicle are well researched. Lots of patents about sound reproduction in vehicle are applied by vehicle companies to recreate acoustic environment\cite{David07}\cite{Simon2005}\cite{Miriam2014}\cite{Gibson15}. However, sound spatial perception is far from satisfactory and acoustic virtual reality has not been implemented in vehicle. Three-dimensional (3D) sound reproduction system provides immersive perception about sound sources and thus enhances the sensation of reality\cite{AasthaTASLP11}\cite{Danilo15TMM}\cite{zms2015}. It is necessary to reproduce 3D sound to enjoy realistic acoustic environment and sound events in vehicle.
 
 %3D音频
-The most there popular 3-D sound reproduction algorithms include Wave Field Synthesis(WFS), Ambisonics and Amplitude panning. WFS is based on Huyghens principle and it is able to reproduce the whole sound field and thus the real sound immersion was recreated\cite{Gergely17}. However, WFS method is not practicle since there are too many loudspeakers requiered in WFS system. Ambisonics system reproduces the sound pressure at listening point in the center of spherical loudspeaker array. While, it is impossible to configure a spherical loudspeaker array in vehicle. Amplitude panning is a widely used sound reproduction technique due to its computational efficiency. Vector base amplitude panning (VBAP) is a popular sound reproduction technique to render the sound direction and distance. And thus VBAP is considered as a promising technique to recreat sound events\cite{Pulkki01spatial}. Unfortunately, VBAP system requiers a spherical loudspeaker array, which is not satisfied in vehicle. 
+The most there popular 3-D sound reproduction algorithms include Wave Field Synthesis(WFS), Ambisonics and Amplitude panning. WFS is based on Huygens principle and it is able to reproduce the whole sound field and thus the real sound immersion was recreated\cite{Gergely17}. However, WFS method is not practical since there are too many loudspeakers required in WFS system. Ambisonics system reproduces the sound pressure at listening point in the center of spherical loudspeaker array. While, it is impossible to configure a spherical loudspeaker array in vehicle. Amplitude panning is a widely used sound reproduction technique due to its computational efficiency. Vector base amplitude panning (VBAP) is a popular sound reproduction technique to render the sound direction and distance. And thus VBAP is considered as a promising technique to recreate sound events\cite{Pulkki01spatial}. Unfortunately, VBAP system requires a spherical loudspeaker array, which is not satisfied in vehicle. 
 
-Though there are several metods to reproduce sound field in physics or mathematics method, the intrinsical goal of sound field reproduction is to reproduce sound pressure at every point in the listening field. 
+Though there are several methods to reproduce sound field in physics or mathematics method, the intrinsic goal of sound field reproduction is to reproduce sound pressure at every point in the listening field. Obviously, this is a typical data mining problem. In this paper, a regression algorithm is proposed to reproduce 3D sound in a specific location, the driving seat for example. A sound pressure data set is set up at the specific listening point based on physical sound theory. The sound pressure is related to the number of loudspeakers, the location of loudspeakers, frequency of sound, the distances between listening point and loudspeakers. Since both inputs and outputs are known, a supervised learning model is built to demonstrate the relationship between received sound pressure and the all factors. The mean square error (MSE) shows the proposed regression model predicts sound pressure accurately.
+
+The rest of this paper is organized as follows: the theory foundation, including 3D sound filed reproduction method and regression model, is introduced in the next section. The proposed method to reproduce the 3D sound in vehicle is developed in section (\ref{sec:algorithm}) experiment is conducted in section (\ref{sec:experiment}). And section (\ref{sec:conclusion}) concludes this paper.
 
 
-essentially
+\section{Fundamental Theory}\label{sec:Fundamental}
+\subsection{3D sound reproduction}
+A realistic 3D sound reproduction system needs to reproduce sound pressure at the listening point or every point in a listening area. The Fourier transform of sound pressure generated by a sound source is shown in equation (\ref{eq:SoundPressure}) \cite{zms2015}\cite{Ando11TASLP}\cite{WS13ICME}.
+\begin{equation}\label{eq:SoundPressure}
+p(r,\xi)=G\frac{e^{-ik|r-\xi|}}{|r-\xi|}s(\omega)
+\end{equation}
+where the parameters are explained as follows:\\
+$\xi$: $\xi=(\xi_x\ \xi_y\ \xi_z)$ is sound source location;\\
+$e$: a constant irrational number which is the base of natural logarithm;\\
+$i$: imaginary unit;\\
+$k$: wave number, which is equal to $\frac{2{\Pi}f}{c}$;\\
+$f$: sound frequency; \\
+$c$: sound velocity;\\
+$G$: a constant number which represents the proportionality coefficient between sound pressure at a unit distance from a loudspeaker and the input to the loudspeaker;\\
+$s(t)$: sound signals in time domain; \\
+$s(\omega)$: sound signals in frequency domain, i.e. Fourier transformation of sound signal $s(t)$;\\
+$r=(x,\ y,\ z)$: listening point.
+
+It is concluded sound pressure is related to several factors after analyzing the sound pressure formula. In a multichannel reproduction system, the computational complexity grows with a exponential trend as the number of loudspeakers increases. However, whatever the 3D sound reproduction methods are, the ultimate goal of the reproduction is to recreate the sound pressure at listening point. As long as the volume of sound pressure data is large enough, data mining technology is a appropriate method to predict sound pressure.
 
 
-\section{tree regression}\label{sec:regression}
+\subsection{Regression algorithm}
+Regression methods, popular techniques to predict system outputs, are well researched by scientists and engineers. Linear egression is one of the most well-known regression algorithm\cite{Hahne14Linear}\cite{Peter15The}. A linear equation is constituted by the product of a constant and  a single variable with the power of either one or zero. A typical example of linear equation is shown in equation (\ref{eq:lineareq}).
+\begin{equation}\label{eq:lineareq}
+    a_1x_1+a_2x_2+\dots+a_nx_n+b=0 
+\end{equation}
 
-\section{three diminsional sound reproduction algorithm in Vehicles}\label{sec:algorithm}
+where $ a_i,i=1,2,\dot,n $ is a coefficient and $b$ is a constant. 
+
+if $a_2=a_3=\dots=a_n=0$, in other words, if there is only one variable, equation (\ref{eq:lineareq}) is the simplest linear equation, which is written as shown in equation (\ref{eq:simplestlineareq}).
+
+\begin{equation}\label{eq:simplestlineareq}
+    ax+b=0 
+\end{equation}
+
+where $ a, b$ are constants. 
+
+Linear regression is a linear approach to demonstrate the relationship between inputs $X=(x_1,\ x_2, \dots, \  x_n)$ and output $Y$. In mathematics, the relationship is shown in equation (\ref{eq:LinRegression}).
+
+\begin{equation}\label{eq:LinRegression}
+    y=a_1x_1+a_2x_2+\dots+a_nx_n+b
+\end{equation}\label{eq:LinRegression}
+
+In data mining, given the known dataset X and Y, the linear regression is established as shown in equation (\ref{eq:LinRegressionY}).
+
+\begin{equation}\label{eq:LinRegressionY}
+    y_i=a_1x_{i1}+a_2x_{i2}+\dots+a_nx_{in}+b_i
+\end{equation}\label{eq:LinRegressionY}
+
+In practice, matrix form is used to show the relationship, which is shown in equations (\ref{eq:LinRegressionVector1}) and (\ref{eq:LinRegressionVector2}).
+
+\begin{equation}\label{eq:LinRegressionVector1}
+    y_i=x_i^TA+b_i
+\end{equation}\label{eq:LinRegressionVector1}
+
+\begin{equation}\label{eq:LinRegressionVector2}
+    Y=X^TA+B
+\end{equation}\label{eq:LinRegressionVector2}
+
+where $Y=(y_1, y_2, \dots, y_n)$, $B=(b_1, b_2, \dots, b_n)$
+
+
+gebraic equation in which each term is either a constant or the product of a constant and (the first power of) a single variable 
+
+
+with one variable      
+
+\cite{Colin15applied}
+
+% 线性回归在音频中有广泛的应用:说话人识别、情感识别、场景识别、音频事件检测、音频事分类  、音频信息检索
+\cite{Alina14detecting}
+abstract  = \"Examining articulatory compensation has been important in understanding how the speech production system is organized, and how it relates to the acoustic and ultimately phonological levels. This paper offers a method that detects articulatory compensation in the acoustic signal, which is based on linear regression modeling of co-variation patterns between acoustic cues. We demonstrate the method on selected acoustic cues for spontaneously produced American English stop consonants. Compensatory patterns of cue variation were observed for voiced stops in some cue pairs, while uniform patterns of cue variation were found for stops as a function of place of articulation or position in the word. Overall, the results suggest that this method can be useful for observing articulatory strategies indirectly from acoustic data and testing hypotheses about the conditions under which articulatory compensation is most likely.\".
+\cite{Zhao15invest}
+abstract={To develop speaker adaptation algorithms for deep neural network (DNN) that are suitable for large-scale online deployment, it is desirable that the adaptation model be represented in a compact form and learned in an unsupervised fashion. In this paper, we propose a novel low-footprint adaptation technique for DNN that adapts the DNN model through node activation functions. The approach introduces slope and bias parameters in the sigmoid activation functions for each speaker, allowing the adaptation model to be stored in a small-sized storage space. We show that this adaptation technique can be formulated in a linear regression fashion, analogous to other speak adaptation algorithms that apply additional linear transformations to the DNN layers. We further investigate semi-supervised online adaptation by making use of the user click-through data as a supervision signal. The proposed method is evaluated on short message dictation and voice search tasks in supervised, unsupervised, and semi-supervised setups. Compared with the singular value decomposition (SVD) bottleneck adaptation, the proposed adaptation method achieves comparable accuracy improvements with much smaller footprint.}, 
+\cite{chen14linear}
+abstract={Personalization techniques can be applied to address the subjectivity issue of music emotion recognition, which is important for music information retrieval. However, achieving satisfactory accuracy in personalized music emotion recognition for a user is difficult because it requires an impractically huge amount of annotations from the user. In this paper, we adopt a probabilistic framework for valence-arousal music emotion modeling and propose an adaptation method based on linear regression to personalize a background model in an online learning fashion. We also incorporate a component-tying strategy to enhance the model flexibility. Comprehensive experiments are conducted to test the performance of the proposed method on three datasets, including a new one created specifically in this work for personalized music emotion recognition. Our results demonstrate the effectiveness of the proposed method.}, 
+
+
+\section{three dimensional sound reproduction algorithm in Vehicle}\label{sec:algorithm}
 
 \section{experiment}\label{sec:experiment}
 
