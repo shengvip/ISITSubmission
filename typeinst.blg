@@ -16,6 +16,12 @@ I was expecting a `,' or a `}'---line 94 of file ISIT.bib
  : @Article{AasthaTASLP11,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I'm ignoring Vieira2016On's extra "pages" field
+--line 251 of file ISIT.bib
+Repeated entry---line 291 of file ISIT.bib
+ : @article{Vincent13determinants
+ :                               ,
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -31,4 +37,4 @@ Warning--missing nationality in Miriam2014
 Warning--missing nationality in Gibson15
 
 Done.
-(There were 6 error messages)
+(There were 7 error messages)

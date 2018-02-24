@@ -70,13 +70,21 @@ where the parameters are explained as follows:\\
 $\xi$: $\xi=(\xi_x\ \xi_y\ \xi_z)$ is sound source location;\\
 $e$: a constant irrational number which is the base of natural logarithm;\\
 $i$: imaginary unit;\\
-$k$: wave number, which is equal to $\frac{2{\Pi}f}{c}$;\\
+$k$: wave number, which is equal to $\frac{2{\pi}f}{c}$;\\
 $f$: sound frequency; \\
 $c$: sound velocity;\\
 $G$: a constant number which represents the proportionality coefficient between sound pressure at a unit distance from a loudspeaker and the input to the loudspeaker;\\
 $s(t)$: sound signals in time domain; \\
 $s(\omega)$: sound signals in frequency domain, i.e. Fourier transformation of sound signal $s(t)$;\\
 $r=(x,\ y,\ z)$: listening point.
+
+Alternatively, the sound pressure is also can be calculated in polar coordinates. Taking the listening point as an origin, sound pressure is shown in equation (\ref{eq:SoundPressureInPolar}).
+
+\begin{equation}\label{eq:SoundPressureInPolar}
+p(\omega)=G\frac{e^{-ik\sigma}}{\sigma}s(\omega)
+\end{equation}
+
+where $\sigma$ is the distance between sound source and listening point(the origin in polar coordinates).
 
 It is concluded sound pressure is related to several factors after analyzing the sound pressure formula. In a multichannel reproduction system, the computational complexity grows with a exponential trend as the number of loudspeakers increases. However, whatever the 3D sound reproduction methods are, the ultimate goal of the reproduction is to recreate the sound pressure at listening point. As long as the volume of sound pressure data is large enough, data mining technology is a appropriate method to predict sound pressure.
 
@@ -97,7 +105,7 @@ if $a_2=a_3=\dots=a_n=0$, in other words, if there is only one variable, equatio
 
 where $ a, b$ are constants. 
 
-Linear regression is a linear approach to demonstrate the relationship between inputs $X=(x_1,\ x_2, \dots, \  x_n)$ and output $Y$. In mathematics, the relationship is shown in equation (\ref{eq:LinRegression}).
+Linear regression is a linear approach to demonstrate the relationship between inputs $X=(x_1,\ x_2, \dots, \  x_n)$ and output $Y$. In mathematics, the relationship is shown in equation (\ref{eq:LinRegression})\cite{Colin15applied}.
 
 \begin{equation}\label{eq:LinRegression}
     y=a_1x_1+a_2x_2+\dots+a_nx_n+b
@@ -119,26 +127,40 @@ In practice, matrix form is used to show the relationship, which is shown in equ
     Y=X^TA+B
 \end{equation}\label{eq:LinRegressionVector2}
 
-where $Y=(y_1, y_2, \dots, y_n)$, $B=(b_1, b_2, \dots, b_n)$
+where $Y=(y_1, y_2, \dots, y_n)$, $B=(b_1, b_2, \dots, b_n), A=(a_1, a_2, \dots, a_n)$. 
 
+For given data $X$ and $Y$, the parameters, i.e. coefficients vector $A$ and constant vector $B$, are to be solved. As soon as the parameters are determined, equation (\ref{eq:LinRegressionVector2}) is able to be used as a predictor functions to predict Y according given data X. 
 
-gebraic equation in which each term is either a constant or the product of a constant and (the first power of) a single variable 
-
-
-with one variable      
-
-\cite{Colin15applied}
-
-% 线性回归在音频中有广泛的应用:说话人识别、情感识别、场景识别、音频事件检测、音频事分类  、音频信息检索
-\cite{Alina14detecting}
-abstract  = \"Examining articulatory compensation has been important in understanding how the speech production system is organized, and how it relates to the acoustic and ultimately phonological levels. This paper offers a method that detects articulatory compensation in the acoustic signal, which is based on linear regression modeling of co-variation patterns between acoustic cues. We demonstrate the method on selected acoustic cues for spontaneously produced American English stop consonants. Compensatory patterns of cue variation were observed for voiced stops in some cue pairs, while uniform patterns of cue variation were found for stops as a function of place of articulation or position in the word. Overall, the results suggest that this method can be useful for observing articulatory strategies indirectly from acoustic data and testing hypotheses about the conditions under which articulatory compensation is most likely.\".
-\cite{Zhao15invest}
-abstract={To develop speaker adaptation algorithms for deep neural network (DNN) that are suitable for large-scale online deployment, it is desirable that the adaptation model be represented in a compact form and learned in an unsupervised fashion. In this paper, we propose a novel low-footprint adaptation technique for DNN that adapts the DNN model through node activation functions. The approach introduces slope and bias parameters in the sigmoid activation functions for each speaker, allowing the adaptation model to be stored in a small-sized storage space. We show that this adaptation technique can be formulated in a linear regression fashion, analogous to other speak adaptation algorithms that apply additional linear transformations to the DNN layers. We further investigate semi-supervised online adaptation by making use of the user click-through data as a supervision signal. The proposed method is evaluated on short message dictation and voice search tasks in supervised, unsupervised, and semi-supervised setups. Compared with the singular value decomposition (SVD) bottleneck adaptation, the proposed adaptation method achieves comparable accuracy improvements with much smaller footprint.}, 
-\cite{chen14linear}
-abstract={Personalization techniques can be applied to address the subjectivity issue of music emotion recognition, which is important for music information retrieval. However, achieving satisfactory accuracy in personalized music emotion recognition for a user is difficult because it requires an impractically huge amount of annotations from the user. In this paper, we adopt a probabilistic framework for valence-arousal music emotion modeling and propose an adaptation method based on linear regression to personalize a background model in an online learning fashion. We also incorporate a component-tying strategy to enhance the model flexibility. Comprehensive experiments are conducted to test the performance of the proposed method on three datasets, including a new one created specifically in this work for personalized music emotion recognition. Our results demonstrate the effectiveness of the proposed method.}, 
-
+Linear regression get widely  practical uses in lots of areas such as engineering\cite{Rice04a}\cite{Vincent13determinants}, biological\cite{Vieira2016On}, epidemiology\cite{Paul13a}, finance\cite{Vincent13determinants}, economics\cite{Ehrenberg08}, environmental science\cite{piegorsch2005analyzing}, computer vision\cite{Xiujuan07locally}. Regression is also applied in acoustic science, especially in speaker recognition, emotion recognition, scenario recognition, audio event detection, audio information retrieval\cite{Alina14detecting}\cite{Zhao15invest}\cite{chen14linear}. 
 
 \section{three dimensional sound reproduction algorithm in Vehicle}\label{sec:algorithm}
+First of all, a sound pressure dataset is needed. In vehicle, several loudspeakers are placed around the vehicle. The sound system is a typical multichannel sound reproduction system. The sound pressure at listening point in a multichannel sound system is the superposition of all active loudspeakers, which is shown in equation (\ref{eq:MultiSoundPressure1}).
+
+\begin{equation}\label{eq:MultiSoundPressure1}
+p(\omega)
+=G\Big(\sum\limits^{L}_{j=1}\frac{e^{-ik\sigma_j}}{\sigma_j}\Big)s_j(\omega) \\
+\end{equation}
+
+where $L$ is the number of loudspeakers, $s_j(\omega)$ is sound signal in frequency domain in the $j$th loudspeaker, $sigma_j$ is the distance between the $i$th loudspeaker and the origin. 
+
+The purpose of a 3D sound reproduction system in vehicle is to reproduce the same sound pressure at listening point in vehicle using several loudspeakers as the sound pressure the sound source generated. Given the received signal s(t) in time domain, we need to reproduce s(t) in loudspeaker array. In an amplitude panning system, the sound signal in the $j$th loudspeaker is assigned as $ s_j(\omega)=w_is(\omega)$, where $w_j$ is the $j$th weight. And then, equation (\ref{eq:MultiSoundPressure1}) is equivalently transformed to equation (\ref{eq:MultiSoundPressure2}).
+
+\begin{equation}\label{eq:MultiSoundPressure2}
+p(\omega)
+=G\Big(\sum\limits^{L}_{j=1}\frac{e^{-ik\sigma_j}}{\sigma_j}\Big)w_js(\omega) \\
+\end{equation}
+
+Apparently, it is necessary to solve all the weights $w=(w_1,w_2,\dots,w_L)$ in equation (\ref{eq:MultiSoundPressure2}).  Unfortunately, it is hard to get a accurate solution to maintain sound pressure. Since sound pressure is depend on several factors and $w_i$ is ranged from $0$ to $1$, regression model is an efficient method to estimate sound pressure as soon as a large amount of sound pressure data is available.  
+
+Sound pressure dataset is created with parameters 
+traversal(遍历)
+
+% 生成理论的声压数据库
+% 对数据库进行训练
+% 得到模型并用于预测
+% 分析误差表现
+
+% 
 
 \section{experiment}\label{sec:experiment}
 
